@@ -1,6 +1,6 @@
 Package.describe({
   name: 'nakedcreativity:ui-select',
-  version: '0.0.2',
+  version: '0.0.3',
   // Brief, one-line summary of the package.
   summary: 'Fork of angular-ui-select adding null item option to dropdown',
   // URL to the Git repository containing the source code for this package.
@@ -13,7 +13,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
   api.addFiles('dist/select.js', 'client');
-  api.addFiles('dist/select.js', 'client');
+  api.addFiles('dist/select.css', 'client');
 });
 
 Package.onTest(function(api) {
