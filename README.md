@@ -7,15 +7,14 @@ Forked from [ui-select](https://github.com/angular-ui/ui-select)
 
 ### Example
 
-`
-<ui-select ng-model="person.selected" theme="bootstrap" null-item="Create a new investor" on-select="selectCallback($item, $model)">
-	<ui-select-match placeholder="Select or search a person in the list...">{{$select.selected.name}}</ui-select-match>
-	<ui-select-choices repeat="item in people | filter: $select.search">
-		<div ng-bind-html="item.name | highlight: $select.search"></div>
-	  	<small ng-bind-html="item.email | highlight: $select.search"></small>
-	</ui-select-choices>
-</ui-select>
-`
+	<ui-select ng-model="person.selected" theme="bootstrap" null-item="Create a new investor" on-select="selectCallback($item, $model)">
+		<ui-select-match placeholder="Select or search a person in the list...">{{$select.selected.name}}</ui-select-match>
+		<ui-select-choices repeat="item in people | filter: $select.search">
+			<div ng-bind-html="item.name | highlight: $select.search"></div>
+		  	<small ng-bind-html="item.email | highlight: $select.search"></small>
+		</ui-select-choices>
+	</ui-select>
+
 In this example, selectCallback is called whenever a new item is selected, it will pass `undefined` if the null item link was used.
 
 ### To-do
@@ -24,4 +23,4 @@ In this example, selectCallback is called whenever a new item is selected, it wi
 * Write templates for the other themes, currently available only in Bootstrap theme
 
 ### Meteor
-Originally written to support a Meteor project. Packaged and available on Atmosphere as xxxxx 
+Originally written to support a Meteor project. Packaged and available on Atmosphere as [xxxxx](http://atmospherejs.com/xxxx) 
