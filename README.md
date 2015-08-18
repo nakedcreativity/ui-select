@@ -23,4 +23,4 @@ In this example, selectCallback is called whenever a new item is selected, it wi
 * Write templates for the other themes, currently available only in Bootstrap theme
 
 ### Meteor
-Originally written to support a Meteor project. Packaged and available on Atmosphere as [xxxxx](http://atmospherejs.com/xxxx) 
+Originally written to support a Meteor project. Packaged and available on Atmosphere as [nakedcreativity:ui-select](https://atmospherejs.com/nakedcreativity/ui-select) 
