@@ -1,6 +1,6 @@
 uis.directive('uiSelect',
-  ['$document', 'uiSelectConfig', 'uiSelectMinErr', 'uisOffset', '$compile', '$parse', '$timeout',
-  function($document, uiSelectConfig, uiSelectMinErr, uisOffset, $compile, $parse, $timeout) {
+  ['$document', 'uiSelectConfig', 'uiSelectMinErr', 'uisOffset', '$compile', '$parse', '$timeout', '$log',
+  function($document, uiSelectConfig, uiSelectMinErr, uisOffset, $compile, $parse, $timeout, $log) {
 
   return {
     restrict: 'EA',
@@ -116,6 +116,13 @@ uis.directive('uiSelect',
             $select.taggingTokens = {isActivated: true, tokens: tokens };
           }
         });
+
+        // observe the new-item option
+        attrs.$observe('newItem', function() {
+          $select.newItem = attrs.newItem !== undefined ? attrs.newItem : false;
+          $log.log('New item is '+$select.newItem);
+        });
+
 
         //Automatically gets focus when loaded
         if (angular.isDefined(attrs.autofocus)){
