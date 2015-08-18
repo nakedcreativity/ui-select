@@ -306,6 +306,14 @@ uis.controller('uiSelectCtrl',
     }
   };
 
+
+  ctrl.selectNull = function(skipFocusser, $event) {
+    ctrl.clear($event);
+    if (ctrl.closeOnSelect) {
+      ctrl.close(skipFocusser);
+    }
+  };
+
   // Closes the dropdown
   ctrl.close = function(skipFocusser) {
     if (!ctrl.open) return;
@@ -328,6 +336,8 @@ uis.controller('uiSelectCtrl',
       ctrl.focusser[0].focus();
     }, 0, false);
   };
+
+
 
   // Toggle dropdown
   ctrl.toggle = function(e) {

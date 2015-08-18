@@ -46,7 +46,7 @@
         <label class="col-sm-3 control-label">Default</label>
         <div class="col-sm-6">
 
-          <ui-select ng-model="person.selected" theme="bootstrap" new-item="Create a new investor">
+          <ui-select ng-model="person.selected" theme="bootstrap" null-item="Create a new investor" on-select="testCallback($item)">
             <ui-select-match placeholder="Select or search a person in the list...">{{$select.selected.name}}</ui-select-match>
             <ui-select-choices repeat="item in people | filter: $select.search">
               <div ng-bind-html="item.name | highlight: $select.search"></div>

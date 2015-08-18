@@ -1,6 +1,6 @@
 uis.directive('uiSelect',
-  ['$document', 'uiSelectConfig', 'uiSelectMinErr', 'uisOffset', '$compile', '$parse', '$timeout', '$log',
-  function($document, uiSelectConfig, uiSelectMinErr, uisOffset, $compile, $parse, $timeout, $log) {
+  ['$document', 'uiSelectConfig', 'uiSelectMinErr', 'uisOffset', '$compile', '$parse', '$timeout',
+  function($document, uiSelectConfig, uiSelectMinErr, uisOffset, $compile, $parse, $timeout) {
 
   return {
     restrict: 'EA',
@@ -118,9 +118,8 @@ uis.directive('uiSelect',
         });
 
         // observe the new-item option
-        attrs.$observe('newItem', function() {
-          $select.newItem = attrs.newItem !== undefined ? attrs.newItem : false;
-          $log.log('New item is '+$select.newItem);
+        attrs.$observe('nullItem', function() {
+          $select.nullItem = attrs.nullItem !== undefined ? attrs.nullItem : false;
         });
 
 

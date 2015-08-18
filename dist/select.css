@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.12.1 - 2015-08-18T11:28:55.548Z
+ * Version: 0.12.1 - 2015-08-18T16:17:04.827Z
  * License: MIT
  */
 
@@ -156,7 +156,7 @@ body > .select2-container.open {
 }
 
 /* See Scrollable Menu with Bootstrap 3 http://stackoverflow.com/questions/19227496 */
-.ui-select-bootstrap > .ui-select-choices {
+.ui-select-bootstrap > .ui-select-choices, .ui-select-bootstrap > .ui-select-new {
   width: 100%;
   height: auto;
   max-height: 200px;
@@ -215,7 +215,7 @@ body > .ui-select-bootstrap.open {
   border-right: 1px solid #428bca;
 }
 
-.ui-select-bootstrap .ui-select-choices-row>a {
+.ui-select-bootstrap .ui-select-choices-row>a, .ui-select-bootstrap .ui-select-null-row>a {
     display: block;
     padding: 3px 20px;
     clear: both;
@@ -231,7 +231,8 @@ body > .ui-select-bootstrap.open {
     background-color: #f5f5f5;
 }
 
-.ui-select-bootstrap .ui-select-choices-row.active>a {
+.ui-select-bootstrap .ui-select-choices-row.active>a, 
+.ui-select-bootstrap .ui-select-null-row>a:hover{
     color: #fff;
     text-decoration: none;
     outline: 0;

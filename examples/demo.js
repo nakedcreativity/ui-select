@@ -44,6 +44,14 @@ app.controller('DemoCtrl', function($scope, $http, $timeout, $interval) {
   $scope.disabled = undefined;
   $scope.searchEnabled = undefined;
 
+  $scope.testCallback = function (item, model){
+    if(item){
+      console.log(item);
+    }else {
+      console.log('Create new item!')
+    }
+  }
+
   $scope.setInputFocus = function (){
     $scope.$broadcast('UiSelectDemo1');
   }
