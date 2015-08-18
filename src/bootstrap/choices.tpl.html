@@ -3,6 +3,7 @@
     ng-show="$select.items.length > 0 || $select.newItem">
   
   <ui-select-null ng-show="$select.nullItem"></ui-select-null>
+  <div class="divider" ng-show="$select.nullItem"></div>
   
   <li class="ui-select-choices-group" id="ui-select-choices-{{ $select.generatedId }}" >
     <div class="divider" ng-show="$select.isGrouped && $index > 0"></div>
